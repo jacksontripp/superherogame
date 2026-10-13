@@ -11,6 +11,7 @@ public class Main {
     Superhero batman1 = new Superhero("Batman", "Batsuit", "Super Strength");
     spiderman1.loseLife();
     System.out.println(batman1);
+    superheroFight(spiderman1, batman1);
 
   }
 

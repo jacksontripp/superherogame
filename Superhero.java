@@ -32,8 +32,8 @@ public Superhero(String name, String costume, String weapon) {
     String superHeroDetails = "Name: " + this.name + "\n" +
                               "Costume: " + this.costume + "\n" +
                               "Weapon: " + this.weapon + "\n" +
-                              "Life: " + (this.life ? "Alive" : "Dead") + "\n" +
-                              "Weapon Strength: " + this.weaponStrength;
+                              "Life: " + this.life + "\n" +
+                              "Weapon Strength: " + this.weaponStrength + "\n";
     return superHeroDetails;
   }
 }
