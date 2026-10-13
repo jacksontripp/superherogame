@@ -14,4 +14,16 @@ public class Main {
 
   }
 
+  public static void superheroFight(Superhero hero1, Superhero hero2) {
+    if (hero1.getWeaponStrength() > hero2.getWeaponStrength()) {
+      hero2.loseLife();
+      System.out.println(hero1);
+    } else if (hero1.getWeaponStrength() < hero2.getWeaponStrength()) {
+      hero1.loseLife();
+      System.out.println(hero2);
+    } else {
+      System.out.println("It's a tie!");
+    }
+  }
+
 }
