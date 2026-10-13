@@ -6,12 +6,22 @@ public class Main {
      * that the following code compiles and so that each superhero's details is printed out
      * nicely
      */
-    Superhero spiderman1 = new Superhero("Spiderman", "Red suit", "Super Web");
-    System.out.println(spiderman1);
-    Superhero batman1 = new Superhero("Batman", "Batsuit", "Super Strength");
-    spiderman1.loseLife();
-    System.out.println(batman1);
-    superheroFight(spiderman1, batman1);
+    Superhero batman = new Superhero("Batman", "Batsuit", "Batarang");
+    Superhero spiderman = new Superhero("Spiderman", "Redsuit", "SuperWeb");
+    Superhero placeholder = new Superhero();
+    
+    System.out.println(batman);
+    System.out.println(spiderman);
+
+    System.out.println("The Green Goblin shows up...");
+    spiderman.loseLife();
+    System.out.println(spiderman);
+
+    int batmanSpecial = batman.specialAttack(4);
+    int placeholderSpecial = placeholder.specialAttack(9001);
+
+    System.out.println(batman.name + " uses his special attack and deals " + batmanSpecial + " damage.");
+    System.out.println(placeholder.name + " uses his special attack and deals " + placeholderSpecial + " damage.");
 
   }
 

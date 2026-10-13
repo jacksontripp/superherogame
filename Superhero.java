@@ -1,5 +1,5 @@
 public class Superhero {
-  private  String name;
+  public  String name;
   private  String costume;
   private  String weapon;
   private boolean life;
@@ -10,8 +10,13 @@ public Superhero(String name, String costume, String weapon) {
     this.name = name;
     this.costume = costume;
     this.weapon = weapon;
-    this.life = true; // default value
-    this.weaponStrength = (int) (Math.random() * 10) + 1; // default value
+  }
+  public Superhero() {
+    this.name = "No name";
+    this.costume = "a t-shirt";
+    this.weapon = "fist";
+    this.life = true; 
+    this.weaponStrength = 0;
   }
   // TODO #2: Add missing methods.
   public boolean loseLife() {
@@ -25,6 +30,18 @@ public Superhero(String name, String costume, String weapon) {
   
   public String getWeapon() {
     return this.weapon;
+  }
+
+  public void setWeaponStrength(int strength) {
+    this.weaponStrength = strength;
+  }
+
+  public void setWeaponStrength() {
+    weaponStrength = (int) (Math.random() * 10) + 1;
+  }
+
+  public int specialAttack(int powerLevel) {
+    return this.weaponStrength + powerLevel;
   }
   // TODO #3: Including a toString() method (see 2.7) to help with printing out the Superhero details.
   public String toString(){
